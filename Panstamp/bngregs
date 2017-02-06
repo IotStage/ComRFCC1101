@@ -1,0 +1,98 @@
+ Address Config = No address check 
+ Base Frequency = 867.999939 
+ CRC Autoflush = false 
+ CRC Enable = true 
+ Carrier Frequency = 927.985291 
+ Channel Number = 150 
+ Channel Spacing = 399.902344 
+ Data Format = Normal mode 
+ Data Rate = 499.878 
+ Deviation = 5.157471 
+ Device Address = 0 
+ Manchester Enable = false 
+ Modulated = true 
+ Modulation Format = GFSK 
+ PA Ramping = false 
+ Packet Length = 255 
+ Packet Length Mode = Variable packet length mode. Packet length configured by the first byte after sync word 
+ Preamble Count = 4 
+ RX Filter BW = 58.035714 
+ Sync Word Qualifier Mode = 30/32 sync word bits detected 
+ TX Power = 0 
+ Whitening = false 
+
+writeReg(CC1101_IOCFG0,0002)
+writeReg(CC1101_FIFOTHR,0003)
+writeReg(CC1101_PKTCTRL0,0008)
+writeReg(CC1101_CHANNR,000A)
+writeReg(CC1101_FSCTRL1,000B)
+writeReg(CC1101_FREQ2,000D)
+writeReg(CC1101_FREQ1,000E)
+writeReg(CC1101_FREQ0,000F)
+writeReg(CC1101_MDMCFG4,0010)
+writeReg(CC1101_MDMCFG3,0011)
+writeReg(CC1101_MDMCFG2,0012)
+writeReg(CC1101_MDMCFG1,0013)
+writeReg(CC1101_DEVIATN,0015)
+writeReg(CC1101_MCSM0,0018)
+writeReg(CC1101_FOCCFG,0019)
+writeReg(CC1101_WORCTRL,0020)
+writeReg(CC1101_FSCAL3,0023)
+writeReg(CC1101_FSCAL2,0024)
+writeReg(CC1101_FSCAL1,0025)
+writeReg(CC1101_FSCAL0,0026)
+writeReg(CC1101_TEST2,002C)
+writeReg(CC1101_TEST1,002D)
+writeReg(CC1101_TEST0,002E)
+
+
+
+
+
+ Address Config = No address check 
+ Base Frequency = 867.999939 
+ CRC Autoflush = false 
+ CRC Enable = true 
+ Carrier Frequency = 867.999939 
+ Channel Number = 0 
+ Channel Spacing = 199.951172 
+ Data Format = Normal mode 
+ Data Rate = 499.878 
+ Deviation = 1.586914 
+ Device Address = 0 
+ Manchester Enable = false 
+ Modulated = true 
+ Modulation Format = GFSK 
+ PA Ramping = false 
+ Packet Length = 255 
+ Packet Length Mode = Variable packet length mode. Packet length configured by the first byte after sync word 
+ Preamble Count = 8 
+ RX Filter BW = 812.500000 
+ Sync Word Qualifier Mode = 30/32 sync word bits detected 
+ TX Power = 12 
+ Whitening = false 
+/* configuration basse*/
+writeReg(CC1101_IOCFG0, 0x06) ; //GDO0 Output Pin Configuration
+writeReg(CC1101_PKTCTRL0, 0x05) ; //Packet Automation Control
+writeReg(CC1101_FSCTRL1, 0x0E) ; //Frequency Synthesizer Control
+writeReg(CC1101_FREQ2, 0x21) ; //Frequency Control Word, High Byte
+writeReg(CC1101_FREQ1, 0x62) ; //Frequency Control Word, Middle Byte
+writeReg(CC1101_FREQ0, 0x76) ; //Frequency Control Word, Low Byte
+writeReg(CC1101_MDMCFG4, 0x0E) ; //Modem Configuration
+writeReg(CC1101_MDMCFG3, 0x3B) ; //Modem Configuration
+writeReg(CC1101_MDMCFG2, 0x13) ; //Modem Configuration
+writeReg(CC1101_MDMCFG1, 0x42) ; //Modem Configuration
+writeReg(CC1101_DEVIATN, 0x00) ; //Modem Deviation Setting
+writeReg(CC1101_MCSM0, 0x18) ; //Main Radio Control State Machine Configuration
+writeReg(CC1101_FOCCFG, 0x1D) ; //Frequency Offset Compensation Configuration
+writeReg(CC1101_BSCFG, 0x1C) ; //Bit Synchronization Configuration
+writeReg(CC1101_AGCCTRL2, 0xC7) ; //AGC Control
+writeReg(CC1101_AGCCTRL1, 0x00) ; //AGC Control
+writeReg(CC1101_AGCCTRL0, 0xB0) ; //AGC Control
+writeReg(CC1101_FREND1, 0xB6) ; //Front End RX Configuration
+writeReg(CC1101_FSCAL3, 0xEA) ; //Frequency Synthesizer Calibration
+writeReg(CC1101_FSCAL2, 0x2A) ; //Frequency Synthesizer Calibration
+writeReg(CC1101_FSCAL1, 0x00) ; //Frequency Synthesizer Calibration
+writeReg(CC1101_FSCAL0, 0x1F) ; //Frequency Synthesizer Calibration
+writeReg(CC1101_TEST0, 0x09) ; //Various Test Settings
+
